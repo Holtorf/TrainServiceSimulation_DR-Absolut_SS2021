@@ -1,0 +1,352 @@
+fileFormatVersion: 2
+guid: ecca3ec4fe73b0d43b47c5230e38c182
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Entrance
+    second: {fileID: 2100000, guid: 69f82dac7dd4af94b829747aae8dd550, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EH_Walls_Backside
+    second: {fileID: 2100000, guid: 746e67fb4e7f50c429dd633682a319bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EH_Walls_Bottom
+    second: {fileID: 2100000, guid: 58465dd67d5eb5b4c88ff90ac5c0a395, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EH_Walls_Pannels
+    second: {fileID: 2100000, guid: c14f828239a583a4c9816e8f827540ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EH_Walls_Top
+    second: {fileID: 2100000, guid: 0019bca5474cd3044a165f886ba7fd01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Banners
+    second: {fileID: 2100000, guid: 8c3a3e5d3600d324e94c94fa77fdba5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Doors_1
+    second: {fileID: 2100000, guid: 70e94838874049a49a3398afd9652e52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Doors_Frame
+    second: {fileID: 2100000, guid: bdf7267273c05ab4fb1d96fcd76a26b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Doors_Metal
+    second: {fileID: 2100000, guid: cda447cc2d66d0b4ca76ea042a2c33ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Doors_N7
+    second: {fileID: 2100000, guid: 0ddbbc605246ef6488cd36048c0d832a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Doors_N8
+    second: {fileID: 2100000, guid: 850bdec6b395dc248963ce6918535007, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Doors_N9
+    second: {fileID: 2100000, guid: c6eb0714836ce6747a3c9a6cdb2b3fcc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Doors_Strips
+    second: {fileID: 2100000, guid: fb4b4c8df4fd714419b160643a2f3175, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Electricity_Panel+Eh_Electricity_Panel_Hull
+    second: {fileID: 2100000, guid: c0806cca23c29d745b8f8252b1833dc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Electricity_Panel_Black
+    second: {fileID: 2100000, guid: 967559a7ba962ca49b8d88062dca8e05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Electricity_Panel_Button_1
+    second: {fileID: 2100000, guid: b4dc38abaa3d63f4e8ad6c07be287449, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Electricity_Panel_Button_2
+    second: {fileID: 2100000, guid: 500240e90914c7c41b6d6a24d83a8aa7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Electricity_Panel_Metal
+    second: {fileID: 2100000, guid: 30605a0112554bd45b6fa564ba72dcdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Electricity_Panel_Sing
+    second: {fileID: 2100000, guid: 40899d8dbfff03b48818adce593e6c4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Far_walls_Main
+    second: {fileID: 2100000, guid: a993349cdfb76934ba1ce141544e601e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Rooms_Windows_Blue_Glass
+    second: {fileID: 2100000, guid: eaaa81dc2c4cfa04b96dee7a14a208a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Rooms_Windows_Frame
+    second: {fileID: 2100000, guid: aa6768e563f158140b9759cf6245ee0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Rooms_Windows_Yellow_Glass
+    second: {fileID: 2100000, guid: d08d9b054a217624987a343aa603ebc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Screen
+    second: {fileID: 2100000, guid: 528c850eca02f4d45a911a0ce6d295f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Stage_Metal
+    second: {fileID: 2100000, guid: 17c827e9a3dee2c47ad9804791e0efff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Stairs_Antislid_Metal
+    second: {fileID: 2100000, guid: f06d6b8315b831d4e81ed41cd766e4c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Stairs_Grey_Metal
+    second: {fileID: 2100000, guid: 957c2efc099b11247a50ccffd0821d07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Stairs_Metal_1
+    second: {fileID: 2100000, guid: 1b7eeee8fa9d96b4d83a394344df6fb0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Stairs_Second_Floor
+    second: {fileID: 2100000, guid: a8f6398fc001ea04b929c4718e86eba2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Supports_Main
+    second: {fileID: 2100000, guid: 5521c9778c264a440aaf2e0ae5e0d995, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Walls_2_Black
+    second: {fileID: 2100000, guid: b10777554ccaaea4c853d5ae9d8b490b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Walls_2_Exit
+    second: {fileID: 2100000, guid: d300f57485271c14fad54ce7c13a3427, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Walls_2_Grey
+    second: {fileID: 2100000, guid: fcc8c921933b52346a05f6cc07c12798, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Walls_2_Grey_2
+    second: {fileID: 2100000, guid: 47ed3521f16dad446a9cf9659442e9ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Walls_2_Metal_1
+    second: {fileID: 2100000, guid: 2b94defe67af07a4e9016184009664be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Walls_2_Panels
+    second: {fileID: 2100000, guid: 7c897b06c8d62a14da44c82d62f105f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Walls_2_White
+    second: {fileID: 2100000, guid: e4f5d054575ad9d448a83f4e6360d2f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Walls_Main_Part
+    second: {fileID: 2100000, guid: 42268465ae045a34eb1ada677ebc2049, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Antislid_metal
+    second: {fileID: 2800000, guid: f7918a7243b8e8945b1857d2a4ccd1cf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Concrete
+    second: {fileID: 2800000, guid: 9baec6434994976429f6e04bb5cceeb4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Electricity_Sign
+    second: {fileID: 2800000, guid: b3a04eb421aeb4346ba7c8f9acb32d94, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Exit
+    second: {fileID: 2800000, guid: c8f74e4ece85b334b9d3915431e39739, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Noise
+    second: {fileID: 2800000, guid: 505ddbad7abd3964fb2f017064d783d3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Poster
+    second: {fileID: 2800000, guid: f9ac170b0b85e974895edd7e2b972cfd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Screen
+    second: {fileID: 2800000, guid: f31119e2d43f54b4497ba3e3b8dad56a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Stage
+    second: {fileID: 2800000, guid: f122d6167b7701e428e9a9774e50c25a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Map #2137833434
+    second: {fileID: 2800000, guid: 39c28fe55b1e140439d9ceb79c94b4e0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Map #2137833439
+    second: {fileID: 2800000, guid: 395945a409213ff44b3b59536e8094ca, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Map #2137833439_48426
+    second: {fileID: 2800000, guid: d4ea3cc881f254f498b9ccce0b1d848d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Map #2137833439_48548
+    second: {fileID: 2800000, guid: 8abb1b32b71dca441bd849e99a492d39, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

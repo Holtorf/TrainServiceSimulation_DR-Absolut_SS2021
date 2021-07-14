@@ -1,0 +1,267 @@
+fileFormatVersion: 2
+guid: 6b79585a305bd6a489315b062ff57668
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Bench_Metal
+    second: {fileID: 2100000, guid: af97035a163bc4a43a04e0b54ff2832e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Bench_Wood
+    second: {fileID: 2100000, guid: b7ad635633fc15549a3765f1290f22ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Boxes
+    second: {fileID: 2100000, guid: 7e8b6cd6053b8bc4dae936c497e2c022, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Camera_Black_1
+    second: {fileID: 2100000, guid: cd5813ee875f5704d98873893082616b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Camera_Black_2
+    second: {fileID: 2100000, guid: 738ed3110a22e5947978ac6f0b569039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Camera_Grey_Part
+    second: {fileID: 2100000, guid: d7bf623553f47a7428c9cbf45d73c9bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Camera_Metal_1
+    second: {fileID: 2100000, guid: c354d6baff75e12468abff3ef85dc518, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Plant_2
+    second: {fileID: 2100000, guid: 74c6f935ca0ef3246b4b6b1c5c64ad92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Plant_Plant_Palm
+    second: {fileID: 2100000, guid: 81714df2531adcf49a866c3cb0600eb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Plant_Pot
+    second: {fileID: 2100000, guid: 8955c72cbbef66e42ac1089ded536a6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Plant_Soil
+    second: {fileID: 2100000, guid: 4378246b43506c240b764ff1c91681d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Plant_Stalk
+    second: {fileID: 2100000, guid: b2ade73f64bdd0544bc8a026f5f2759d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Room_Lamps_Black
+    second: {fileID: 2100000, guid: 67cfef4ef57703048b0f00c7b2f1c497, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Room_Lamps_Cord
+    second: {fileID: 2100000, guid: ca821b5e24a521f44a8611a47547b757, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Room_Lamps_Light_1
+    second: {fileID: 2100000, guid: e29ed92fc268158459e6c56528c36119, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Room_Lamps_Light_2
+    second: {fileID: 2100000, guid: 63b5a9a323ddbe54fb3b7dc8fa1685b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Trash_Can_Green
+    second: {fileID: 2100000, guid: 7b62fc06c0605dc44a4dbb59e69cbf73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Trash_Can_Metal
+    second: {fileID: 2100000, guid: d4e11cd0710c1454b9940374e3aecadc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_Trash_Can_Wheel
+    second: {fileID: 2100000, guid: 65dad47cf287e21459ab6c2725d0fd51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_water_cooler_Blue
+    second: {fileID: 2100000, guid: a5ca01c5699048f49907d28340fe5212, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_water_cooler_Grey
+    second: {fileID: 2100000, guid: 158fa6488a89370478a6d75d00f6a0c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_water_cooler_Red
+    second: {fileID: 2100000, guid: c8a0e818434281d41926f9bd320bce31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_water_cooler_blue_plastic
+    second: {fileID: 2100000, guid: 4a06fe9b804b47546970a5b1f195072b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eh_water_cooler_white
+    second: {fileID: 2100000, guid: afaa7ea24f2040843b49e05acb988bdb, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Box
+    second: {fileID: 2800000, guid: bbc28a4f17b813f4f8fea1ee1cad6b71, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Plant_2
+    second: {fileID: 2800000, guid: 574270423ecd79a4b8da7bdbf5386f87, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Plant_Palm
+    second: {fileID: 2800000, guid: a4a43d067da89b94cb5525da48ced380, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Plant_Palm_B
+    second: {fileID: 2800000, guid: 58ed2c6170378c44487a9f1c7fec05cb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Soil
+    second: {fileID: 2800000, guid: 7f07c1bda02229345b46783da57a61ed, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Stalk
+    second: {fileID: 2800000, guid: 5bea3d0f3868c6c418722619b1be6245, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Trash_Can
+    second: {fileID: 2800000, guid: 866f882676682034794dd98a62f7eb5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Wood
+    second: {fileID: 2800000, guid: bc717571ca96d9142999ccddc923f5cb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Eh_Wood_R
+    second: {fileID: 2800000, guid: f80b5358238531c4caf0ac0871f08b96, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
