@@ -9,41 +9,43 @@ namespace TrainServiceSimulation.Train
     {
         
         //
-        [SerializeField]
-        private List<Wagon> _wagons = new List<Wagon>();
+        public List<Wagon> wagons = new List<Wagon>();
         
         //
         private float _decoupleTime = 1f;
 
         //Only to check in the inspector
-        public bool _finishedDecoupling = false;
-        public bool _finishedCoupling = false;
+        private bool _finishedDecoupling = false;
+        private bool _finishedCoupling = false;
+
+        public bool FinishedDecoupling { get => _finishedDecoupling; set => _finishedDecoupling = value; }
+        public bool FinishedCoupling { get => _finishedCoupling; set => _finishedCoupling = value; }
 
         //function to decouple the diffrent wagoons from the train
         public void Decouple()
         {
-            LeanTween.value(0f, 1f, _decoupleTime * _wagons.Count - 1).setOnComplete(() =>
+            LeanTween.value(0f, 1f, _decoupleTime * wagons.Count - 1).setOnComplete(() =>
             {
-                _finishedDecoupling = true;
+                FinishedDecoupling = true;
             });
-            for (int i = 0; i < _wagons.Count - 1; i++)
+            for (int i = 0; i < wagons.Count - 1; i++)
             {
-                float wMove = _wagons[i].transform.position.x - (_wagons.Count - 1 * i);
-                LeanTween.moveX(_wagons[i].gameObject, wMove, _decoupleTime).setDelay(i * _decoupleTime);
+                float wMove = wagons[i].transform.position.x - (wagons.Count - 1 * i);
+                LeanTween.moveX(wagons[i].gameObject, wMove, _decoupleTime).setDelay(i * _decoupleTime);
             }
         }
 
         //function to couple the diffrent wagoons after the RepairSequenz from the train
         public void Couple()
         {
-            LeanTween.value(0f, 1f, _decoupleTime * _wagons.Count - 1).setOnComplete(() =>
+            LeanTween.value(0f, 1f, _decoupleTime * wagons.Count - 1).setOnComplete(() =>
             {
-                _finishedCoupling = true;
+                FinishedCoupling = true;
             });
-            for (int i = _wagons.Count - 1; i >= 0; i--)
+            for (int i = wagons.Count - 1; i >= 0; i--)
             {
-                float wMove = _wagons[i].transform.position.x + (_wagons.Count - 1 * i);
-                LeanTween.moveX(_wagons[i].gameObject, wMove, _decoupleTime).setDelay((_wagons.Count - 1) - i * _decoupleTime);
+                float wMove = wagons[i].transform.position.x + (wagons.Count - 1 * i);
+                LeanTween.moveX(wagons[i].gameObject, wMove, _decoupleTime).setDelay((wagons.Count - 1) - i * _decoupleTime);
             }
         }
     }
