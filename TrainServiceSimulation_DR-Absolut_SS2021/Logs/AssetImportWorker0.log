@@ -15,12 +15,12 @@ E:/GitHub/TrainServiceSimulation_DR-Absolut_SS2021/TrainServiceSimulation_DR-Abs
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58299
+51203
 Successfully changed project path to: E:/GitHub/TrainServiceSimulation_DR-Absolut_SS2021/TrainServiceSimulation_DR-Absolut_SS2021
 E:/GitHub/TrainServiceSimulation_DR-Absolut_SS2021/TrainServiceSimulation_DR-Absolut_SS2021
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 56.71 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 1.35 ms.
+Refreshing native plugins compatible for Editor in 56.49 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 1.12 ms.
 Initialize engine version: 2020.3.7f1 (dd97f2c94397)
 [Subsystems] Discovering subsystems at path F:/Programme/2020.3.7f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path E:/GitHub/TrainServiceSimulation_DR-Absolut_SS2021/TrainServiceSimulation_DR-Absolut_SS2021/Assets
@@ -35,26 +35,26 @@ Initialize mono
 Mono path[0] = 'F:/Programme/2020.3.7f1/Editor/Data/Managed'
 Mono path[1] = 'F:/Programme/2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'F:/Programme/2020.3.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56580
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: F:/Programme/2020.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: F:/Programme/2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006005 seconds.
+Registered in 0.006096 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 58.83 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+Refreshing native plugins compatible for Editor in 58.04 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.463 seconds
+- Completed reload, in  3.378 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002244 seconds.
+Registered in 0.002202 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 61.57 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+Refreshing native plugins compatible for Editor in 61.30 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
 NullReferenceException: Object reference not set to an instance of an object
   at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
   at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
@@ -62,200 +62,52 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.484 seconds
+- Completed reload, in  1.383 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 24.51 ms.
-Unloading 2546 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 106.7 MB.
-System memory in use after: 106.9 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2999.
-Total: 3.448400 ms (FindLiveObjects: 0.395700 ms CreateObjectMapping: 0.090300 ms MarkObjects: 2.807000 ms  DeleteObjects: 0.153500 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scripts/Bay/BayActivater.cs
-  artifactKey: Guid(fd808726f38a2e34eba486e198d68e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Bay/BayActivater.cs using Guid(fd808726f38a2e34eba486e198d68e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0931f5830f49bec74349426cf400653e') in 0.141317 seconds
-  Import took 0.146955 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 189.901017 seconds.
-  path: Assets/Scripts/Train/TrainManager.cs
-  artifactKey: Guid(e8f4f50940c503b4caefe063f2e3f029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Train/TrainManager.cs using Guid(e8f4f50940c503b4caefe063f2e3f029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e6b4a27c53232c10ffcaac99e81d6e7') in 0.009387 seconds
-  Import took 0.014323 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.241569 seconds.
-  path: Assets/Scripts/Train/Train.cs
-  artifactKey: Guid(b8d63bc58616e5b4aa24e558a79ef61c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Train/Train.cs using Guid(b8d63bc58616e5b4aa24e558a79ef61c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd407c7262d1d231f7c09a142d3ac6add') in 0.009933 seconds
-  Import took 0.015340 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002316 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.465 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.33 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
-Unloading 2510 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.0 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3004.
-Total: 3.501200 ms (FindLiveObjects: 0.396800 ms CreateObjectMapping: 0.076200 ms MarkObjects: 2.924500 ms  DeleteObjects: 0.101400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002408 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.252 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Unloading 2510 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3008.
-Total: 3.806400 ms (FindLiveObjects: 0.350200 ms CreateObjectMapping: 0.089900 ms MarkObjects: 3.270600 ms  DeleteObjects: 0.094000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 75.497738 seconds.
-  path: Assets/Scripts/Train/TrainManager.cs
-  artifactKey: Guid(e8f4f50940c503b4caefe063f2e3f029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Train/TrainManager.cs using Guid(e8f4f50940c503b4caefe063f2e3f029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b5d380303d7d6a97467ce6230ba71b') in 0.007288 seconds
-  Import took 0.014425 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002343 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.257 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
 Preloading 1 native plugins for Editor in 0.08 ms.
-Unloading 2510 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.1 MB.
+Unloading 2551 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 106.9 MB.
+System memory in use after: 107.1 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3012.
-Total: 2.985300 ms (FindLiveObjects: 0.332400 ms CreateObjectMapping: 0.072200 ms MarkObjects: 2.481300 ms  DeleteObjects: 0.097700 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3004.
+Total: 2.872900 ms (FindLiveObjects: 0.352300 ms CreateObjectMapping: 0.081000 ms MarkObjects: 2.300300 ms  DeleteObjects: 0.138000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 268.428116 seconds.
-  path: Assets/Scripts/Train/TrainManager.cs
-  artifactKey: Guid(e8f4f50940c503b4caefe063f2e3f029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Train/TrainManager.cs using Guid(e8f4f50940c503b4caefe063f2e3f029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb248b5337079cb3c2c2627ee70f9d6d') in 0.007709 seconds
-  Import took 0.014574 seconds .
+  path: Assets/Scripts/Player/ActivateDashboard.cs
+  artifactKey: Guid(1c57007960172bc40970acc67ea2a5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/ActivateDashboard.cs using Guid(1c57007960172bc40970acc67ea2a5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '160d834180490a2eed06e8b0d1a2ae80') in 0.068568 seconds
+  Import took 0.072735 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 204.143160 seconds.
+  path: Assets/Scripts/Player/ActivateDashboard.cs
+  artifactKey: Guid(1c57007960172bc40970acc67ea2a5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/ActivateDashboard.cs using Guid(1c57007960172bc40970acc67ea2a5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8582db2779e5952dcc659fbe31fd6342') in 0.002244 seconds
+  Import took 0.007316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.258690 seconds.
+  path: Assets/Scripts/Player/ActivateDashboard.cs
+  artifactKey: Guid(1c57007960172bc40970acc67ea2a5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/ActivateDashboard.cs using Guid(1c57007960172bc40970acc67ea2a5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8582db2779e5952dcc659fbe31fd6342') in 0.002279 seconds
+  Import took 0.006713 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002412 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.244 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Unloading 2510 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.1 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3016.
-Total: 2.934900 ms (FindLiveObjects: 0.339900 ms CreateObjectMapping: 0.072300 ms MarkObjects: 2.424400 ms  DeleteObjects: 0.096500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 940.129300 seconds.
-  path: Assets/Scripts/UI/UIController.cs
-  artifactKey: Guid(716b60b63eec12647913fc1b92d79ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI/UIController.cs using Guid(716b60b63eec12647913fc1b92d79ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '541def05c5f2fa82190aae40115ca78e') in 0.016813 seconds
-  Import took 0.021913 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003572 seconds.
-  path: Assets/Scripts/UI/UIController.cs
-  artifactKey: Guid(716b60b63eec12647913fc1b92d79ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI/UIController.cs using Guid(716b60b63eec12647913fc1b92d79ac1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '541def05c5f2fa82190aae40115ca78e') in 0.002326 seconds
-  Import took 0.006701 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.916261 seconds.
-  path: Assets/Scripts/AppManager.cs
-  artifactKey: Guid(552505fbe101db944acf289585818d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/AppManager.cs using Guid(552505fbe101db944acf289585818d11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbb346ee9bce81b0544f52fbd41dfab9') in 0.009480 seconds
-  Import took 0.018444 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002638 seconds.
+Registered in 0.002205 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+Preloading 1 native plugins for Editor in 0.08 ms.
 NullReferenceException: Object reference not set to an instance of an object
   at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
   at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
@@ -263,42 +115,61 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.291 seconds
+- Completed reload, in  1.247 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 104.9 MB.
+System memory in use after: 105.1 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3008.
+Total: 3.121000 ms (FindLiveObjects: 0.368100 ms CreateObjectMapping: 0.083300 ms MarkObjects: 2.571600 ms  DeleteObjects: 0.096700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002301 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.216 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Unloading 2511 Unused Serialized files (Serialized files now loaded: 0)
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 105.0 MB.
 System memory in use after: 105.2 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3021.
-Total: 2.851700 ms (FindLiveObjects: 0.328400 ms CreateObjectMapping: 0.073900 ms MarkObjects: 2.350000 ms  DeleteObjects: 0.098100 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3012.
+Total: 3.086500 ms (FindLiveObjects: 0.319700 ms CreateObjectMapping: 0.079500 ms MarkObjects: 2.589500 ms  DeleteObjects: 0.096600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 378.515758 seconds.
-  path: Assets/Scripts/Enums/EHandTypes.cs
-  artifactKey: Guid(6c99a8460cf02cf448e2edc00b09d028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Enums/EHandTypes.cs using Guid(6c99a8460cf02cf448e2edc00b09d028) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c3dbbbb5e84b7985c8d6d98a472fbb1') in 0.013827 seconds
-  Import took 0.020842 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3799.074636 seconds.
-  path: Assets/Scripts/Bay/RepairSequnce.cs
-  artifactKey: Guid(f880cfc7502cdbc45813b30854146d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Bay/RepairSequnce.cs using Guid(f880cfc7502cdbc45813b30854146d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a382aeb63cb84c4554633c2c6b88157') in 0.008929 seconds
-  Import took 0.019324 seconds .
+  Time since last request: 25.989639 seconds.
+  path: Assets/Scripts/Player/ActivateDashboard.cs
+  artifactKey: Guid(1c57007960172bc40970acc67ea2a5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/ActivateDashboard.cs using Guid(1c57007960172bc40970acc67ea2a5e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94c8edf975674fd8659172c35ed54614') in 0.006549 seconds
+  Import took 0.010905 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.007950 seconds.
+Registered in 0.002163 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
 NullReferenceException: Object reference not set to an instance of an object
   at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
   at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
@@ -306,107 +177,102 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.262 seconds
+- Completed reload, in  1.235 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
-Unloading 2512 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 105.0 MB.
-System memory in use after: 105.2 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3026.
-Total: 3.247000 ms (FindLiveObjects: 0.428500 ms CreateObjectMapping: 0.078400 ms MarkObjects: 2.627400 ms  DeleteObjects: 0.110500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 143.734796 seconds.
-  path: Assets/Scripts/EventManager.cs
-  artifactKey: Guid(772e83715a24d3e408c201d88b1e9af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/EventManager.cs using Guid(772e83715a24d3e408c201d88b1e9af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4fae98d2151efa0f75c4ed90165ceb0') in 0.015186 seconds
-  Import took 0.020294 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002249 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.246 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Unloading 2513 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 105.0 MB.
-System memory in use after: 105.2 MB.
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3031.
-Total: 3.118900 ms (FindLiveObjects: 0.386300 ms CreateObjectMapping: 0.082400 ms MarkObjects: 2.543000 ms  DeleteObjects: 0.105900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002260 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.12 ms.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.266 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Unloading 2513 Unused Serialized files (Serialized files now loaded: 0)
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 105.1 MB.
 System memory in use after: 105.2 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3035.
-Total: 3.075400 ms (FindLiveObjects: 0.400800 ms CreateObjectMapping: 0.081200 ms MarkObjects: 2.464800 ms  DeleteObjects: 0.126700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 590.996113 seconds.
-  path: Assets/Scripts/EventManager.cs
-  artifactKey: Guid(772e83715a24d3e408c201d88b1e9af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/EventManager.cs using Guid(772e83715a24d3e408c201d88b1e9af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74b06b935335455026f97ec53a4ec76b') in 0.007565 seconds
-  Import took 0.014309 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 680.748548 seconds.
-  path: Assets/Scripts/EventManager.cs
-  artifactKey: Guid(772e83715a24d3e408c201d88b1e9af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/EventManager.cs using Guid(772e83715a24d3e408c201d88b1e9af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2384a4976074bc676965eeb1c0bee5ac') in 0.002650 seconds
-  Import took 0.009517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.039875 seconds.
-  path: Assets/Scripts/EventManager.cs
-  artifactKey: Guid(772e83715a24d3e408c201d88b1e9af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/EventManager.cs using Guid(772e83715a24d3e408c201d88b1e9af7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2384a4976074bc676965eeb1c0bee5ac') in 0.002440 seconds
-  Import took 0.007198 seconds .
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3016.
+Total: 3.247700 ms (FindLiveObjects: 0.434100 ms CreateObjectMapping: 0.080500 ms MarkObjects: 2.628800 ms  DeleteObjects: 0.101600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002281 seconds.
+Registered in 0.002184 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.208 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.1 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3020.
+Total: 2.768500 ms (FindLiveObjects: 0.310700 ms CreateObjectMapping: 0.074400 ms MarkObjects: 2.292900 ms  DeleteObjects: 0.089400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002522 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.270 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.78 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.15 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.1 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3024.
+Total: 3.322600 ms (FindLiveObjects: 0.451700 ms CreateObjectMapping: 0.081700 ms MarkObjects: 2.667700 ms  DeleteObjects: 0.119000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002348 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.235 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.1 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3028.
+Total: 2.994400 ms (FindLiveObjects: 0.364900 ms CreateObjectMapping: 0.084600 ms MarkObjects: 2.448600 ms  DeleteObjects: 0.094700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002384 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
@@ -419,25 +285,52 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.223 seconds
+- Completed reload, in  1.274 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Unloading 2512 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 105.0 MB.
-System memory in use after: 105.2 MB.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.1 MB.
+System memory in use after: 105.3 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 3038.
-Total: 3.519600 ms (FindLiveObjects: 0.395800 ms CreateObjectMapping: 0.077100 ms MarkObjects: 2.927000 ms  DeleteObjects: 0.118000 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3032.
+Total: 3.701800 ms (FindLiveObjects: 0.582000 ms CreateObjectMapping: 0.110900 ms MarkObjects: 2.894300 ms  DeleteObjects: 0.112700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002334 seconds.
+Registered in 0.002220 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.249 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.1 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3036.
+Total: 3.309000 ms (FindLiveObjects: 0.366900 ms CreateObjectMapping: 0.074800 ms MarkObjects: 2.763100 ms  DeleteObjects: 0.102300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002263 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 43.42 ms, found 3 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 NullReferenceException: Object reference not set to an instance of an object
   at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
@@ -446,14 +339,111 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.225 seconds
+- Completed reload, in  1.265 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
-Preloading 1 native plugins for Editor in 0.08 ms.
-Unloading 2512 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 105.1 MB.
-System memory in use after: 105.2 MB.
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 1722 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.0 MB.
+System memory in use after: 89.1 MB.
 
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3042.
-Total: 3.056900 ms (FindLiveObjects: 0.332600 ms CreateObjectMapping: 0.072700 ms MarkObjects: 2.546000 ms  DeleteObjects: 0.104200 ms)
+Unloading 108 unused Assets to reduce memory usage. Loaded Objects now: 2938.
+Total: 3.076400 ms (FindLiveObjects: 0.390200 ms CreateObjectMapping: 0.078800 ms MarkObjects: 2.461800 ms  DeleteObjects: 0.143600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002737 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 57.87 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.524 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.01 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 2514 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 105.1 MB.
+System memory in use after: 105.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 3044.
+Total: 3.577900 ms (FindLiveObjects: 0.373600 ms CreateObjectMapping: 0.075400 ms MarkObjects: 3.008100 ms  DeleteObjects: 0.118800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1767.160109 seconds.
+  path: Assets/Models/Player/Materials/Hands.shadergraph
+  artifactKey: Guid(4f2ba8399c2b6f043b692f03a4aed3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Materials/Hands.shadergraph using Guid(4f2ba8399c2b6f043b692f03a4aed3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20868decd890502eb2148f7829395a8e') in 0.028896 seconds
+  Import took 0.033540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 370.445971 seconds.
+  path: Assets/Models/Player/Materials/Hands.shadergraph
+  artifactKey: Guid(4f2ba8399c2b6f043b692f03a4aed3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Materials/Hands.shadergraph using Guid(4f2ba8399c2b6f043b692f03a4aed3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afb08e209442412f1cd44910448ed755') in 0.002993 seconds
+  Import took 0.007532 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007965 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:249 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\GitHub\TrainServiceSimulation_DR-Absolut_SS2021\TrainServiceSimulation_DR-Absolut_SS2021\Library\PackageCache\com.unity.xr.oculus@1.9.1\Runtime\OculusLoader.cs:234 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.9.1/Runtime/OculusLoader.cs Line: 249)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.451 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Nature/SpeedTree7': dependency 'BillboardShader' shader 'Universal Render Pipeline/Nature/SpeedTree7 Billboard' not found
+Shader 'Universal Render Pipeline/Baked Lit': fallback shader 'Universal Render Pipeline/Unlit' not found
+Shader 'Universal Render Pipeline/Simple Lit': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Universal Render Pipeline/Terrain/Lit': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'AddPassShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)' not found
+Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'BaseMapShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)' not found
+Shader 'Universal Render Pipeline/Terrain/Lit': dependency 'BaseMapGenShader' shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Basemap Gen)' not found
+Shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Add Pass)': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Hidden/Universal Render Pipeline/Terrain/Lit (Base Pass)': fallback shader 'Hidden/Universal Render Pipeline/FallbackError' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 2971 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 132.8 MB.
+System memory in use after: 128.8 MB.
+
+Unloading 57 unused Assets to reduce memory usage. Loaded Objects now: 3455.
+Total: 5.153400 ms (FindLiveObjects: 0.381800 ms CreateObjectMapping: 0.086100 ms MarkObjects: 2.486600 ms  DeleteObjects: 2.197600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 359.434904 seconds.
+  path: Assets/Models/Player/Materials/Hands.shadergraph
+  artifactKey: Guid(4f2ba8399c2b6f043b692f03a4aed3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Materials/Hands.shadergraph using Guid(4f2ba8399c2b6f043b692f03a4aed3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '884df3d9ca3fb369a5047fea3ed1bfb2') in 0.026933 seconds
+  Import took 0.032746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.795323 seconds.
+  path: Assets/Models/Player/Materials/HologramHandsShader.shadergraph
+  artifactKey: Guid(a81dbe536b6eb704a83b05ae8f71bbde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Player/Materials/HologramHandsShader.shadergraph using Guid(a81dbe536b6eb704a83b05ae8f71bbde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7df8349b6665bb36f53e938bfc9bd7f') in 0.009868 seconds
+  Import took 0.015305 seconds .
 

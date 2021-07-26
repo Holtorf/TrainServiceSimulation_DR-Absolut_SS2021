@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8351116219826209996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 8390107740794813028}
   m_Father: {fileID: 0}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 0
   useAsFist: 0
-  thumbMoveSpeed: 2
+  thumbMoveSpeed: 5
   animator: {fileID: 8351116219826209970}
 --- !u!1001 &8351116220684639631
 PrefabInstance:

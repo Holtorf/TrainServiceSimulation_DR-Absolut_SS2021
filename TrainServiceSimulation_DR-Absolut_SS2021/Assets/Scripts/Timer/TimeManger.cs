@@ -56,9 +56,12 @@ namespace TrainServiceSimulation
 
         }
 
-        public void SpeedChanger()
+        public void OnSpeedSliderChanged()
         {
-            Time.timeScale = _speedSlider.value;
+            if (!_isPaused)
+            {
+                Time.timeScale = _speedSlider.value;
+            }   
         }
     }
 }

@@ -6,7 +6,7 @@ using TrainServiceSimulation;
 namespace TrainServiceSimulation
 {
 
-    public class NewBehaviourScript : MonoBehaviour
+    public class TimerStarter : MonoBehaviour
     {
         [SerializeField]
         private TimeManger _timeM;
@@ -15,7 +15,7 @@ namespace TrainServiceSimulation
         {
             _timeM.IsTimerRunning = true;
             _timeM.StartTime = Time.time;
-
+            Debug.Log("IGOR MEHR STROM");
         }
     }
 

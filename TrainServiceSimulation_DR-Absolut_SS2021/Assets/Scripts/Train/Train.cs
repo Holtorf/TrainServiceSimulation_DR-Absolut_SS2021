@@ -15,7 +15,9 @@ namespace TrainServiceSimulation.Train
         private float _decoupleTime = 1f;
 
         //Only to check in the inspector
+        [SerializeField]
         private bool _finishedDecoupling = false;
+        [SerializeField]
         private bool _finishedCoupling = false;
 
         public bool FinishedDecoupling { get => _finishedDecoupling; set => _finishedDecoupling = value; }

@@ -8,24 +8,34 @@ namespace TrainServiceSimulation
 {
     public class AppManager : MonoBehaviour
     {
+        [SerializeField]
         private TrainManager _trainM;
+        [SerializeField]
         private RepairSequence _repairS;
-        
-        // Start is called before the first frame update
-        void Start()
+
+        private bool _gameStarted = false;
+
+        public bool GameStarted { get => _gameStarted; set => _gameStarted = value; }
+
+        public void Start()
         {
-            Begin();
+            StartCoroutine(StartSequence());
         }
 
-        public void Begin()
+        IEnumerator StartSequence()
         {
-
+            //_repairS.AddListenerSequenceFinishedEvent(OnRepairSequenceFinished);
+            yield return new WaitUntil(() => GameStarted == true);
+            //yield return new WaitForSeconds(1f); 
+            Debug.Log("GameStarted");
+            _repairS.Init();
+            _repairS.Begin();
         }
 
-        // Update is called once per frame
-        void Update()
+        public void OnRepairSequenceFinished()
         {
-
+            Debug.Log("RepairSequenceFinished");
+            StartCoroutine(StartSequence());
         }
     }
 }

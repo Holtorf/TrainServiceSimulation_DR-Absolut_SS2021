@@ -25,7 +25,7 @@ namespace TrainServiceSimulation.Train
 
         private Train _currentTrain;
 
-        private int _trainNumber = 0;
+        private int _trainNumber = 2;
 
         //[SerializeField, Tooltip("ServiceTypOrder: Cleaning,Electric,Interior,Problems,Quality")] 
         //private BayManager[] _bays;
@@ -67,6 +67,7 @@ namespace TrainServiceSimulation.Train
             {
                 _wagon.State = Enums.EWagonState.PENDING;
             }
+            yield return new WaitForSeconds(1f);
 
             _startWorkingEvent.Invoke();
             yield return new WaitUntil(() => _currentTrain.wagons.All<Wagon>(x => x.State == Enums.EWagonState.COMPLETED));

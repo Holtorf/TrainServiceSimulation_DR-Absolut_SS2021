@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handType: 1
   useAsFist: 0
-  thumbMoveSpeed: 2
+  thumbMoveSpeed: 5
   animator: {fileID: 4418298118818650007}
 --- !u!1001 &3198226887011910246
 PrefabInstance:

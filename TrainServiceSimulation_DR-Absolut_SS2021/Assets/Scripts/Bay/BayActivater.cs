@@ -19,11 +19,11 @@ namespace TrainServiceSimulation.Bay
 
         public void BayCountChange()
         {
-            for(int i = 0; i <= BayCount; i++)
+            for(int i = 0; i <= BayCount-1; i++)
             {
                 _bays[i].SetActive(true);
             }
-            for(int j = BayCount; j <= _bays.Length; j++)
+            for(int j = BayCount; j <= _bays.Length-1; j++)
             {
                 _bays[j].SetActive(false);
             }

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HologramHands
-  m_Shader: {fileID: -6465566751694194690, guid: ea537c7eee1abbf439390907f1c9ae81, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: a81dbe536b6eb704a83b05ae8f71bbde, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
