@@ -23,6 +23,11 @@ namespace TrainServiceSimulation
         public float StartTime { get => _startTime; set => _startTime = value; }
         public bool IsTimerRunning { get => _isTimerRunning; set => _isTimerRunning = value; }
 
+        private void Awake()
+        {
+            Time.timeScale = _speedSlider.value;
+        }
+
         void Update()
         {
             if (IsTimerRunning)
@@ -51,7 +56,7 @@ namespace TrainServiceSimulation
             }
             else
             {
-                Time.timeScale = 1;
+                Time.timeScale = _speedSlider.value;
             }
 
         }

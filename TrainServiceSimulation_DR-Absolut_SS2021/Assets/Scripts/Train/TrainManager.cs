@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TrainServiceSimulation;
 using TrainServiceSimulation.Bay;
+using TrainServiceSimulation.FTS;
 
 namespace TrainServiceSimulation.Train
 {
@@ -13,8 +14,14 @@ namespace TrainServiceSimulation.Train
         [SerializeField] 
         private TimeManger _timeM;
 
+        [SerializeField]
+        private FtsMovement _ftsMovement;
+
+        [SerializeField]
+        private FtsManager _ftsManager;
+
         [SerializeField] 
-        private List<Train> _trains = new List<Train>();
+        private List<Trains> _trains = new List<Trains>();
         [SerializeField]
         private Transform _trainOrigin;
         [SerializeField]
@@ -23,7 +30,7 @@ namespace TrainServiceSimulation.Train
         [SerializeField]
         private float _trainMoveTime = 10f;
 
-        private Train _currentTrain;
+        private Trains _currentTrain;
 
         private int _trainNumber = 2;
 
@@ -69,16 +76,13 @@ namespace TrainServiceSimulation.Train
             }
             yield return new WaitForSeconds(1f);
 
-            _startWorkingEvent.Invoke();
-            yield return new WaitUntil(() => _currentTrain.wagons.All<Wagon>(x => x.State == Enums.EWagonState.COMPLETED));
+            _ftsManager.InitFtsManager(_currentTrain);
 
+            _startWorkingEvent.Invoke();
+            yield return new WaitUntil(() => _currentTrain.wagons.All<Wagon>(x => x.State == Enums.EWagonState.NONE));
 
             _currentTrain.Couple();
             yield return new WaitUntil(() => _currentTrain.FinishedCoupling);
-            foreach (Wagon wagon in _currentTrain.wagons)
-            {
-                wagon.State = Enums.EWagonState.NONE;
-            }
             _maintenanceFinishedEvent.Invoke();
         }
 
@@ -98,6 +102,11 @@ namespace TrainServiceSimulation.Train
             });
         }
 
+        public void DestroyTrain()
+        {
+            Destroy(_currentTrain.gameObject);
+            _timeM.IsTimerRunning = false;
+        }
         public void AddListenerTrainReachedDestinationEvent(UnityAction call)
         {
             _trainReachedDestinationEvent.AddListener(call);
@@ -125,13 +134,5 @@ namespace TrainServiceSimulation.Train
             _maintenanceFinishedEvent.RemoveListener(call);
         }
 
-        public void AddListenerStartWorking(UnityAction call)
-        {
-            _startWorkingEvent.AddListener(call);
-        }
-        public void RemoveListenerStartWorking(UnityAction call)
-        {
-            _startWorkingEvent.RemoveListener(call);
-        }
     }
 }

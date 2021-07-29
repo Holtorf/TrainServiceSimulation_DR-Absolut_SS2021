@@ -13,7 +13,6 @@ namespace TrainServiceSimulation.Train{
             if (other.CompareTag("StartGame"))
             {
                 _appM.GameStarted = true;
-                Debug.Log(_appM.GameStarted + "SimulationStart");
             }
 
         }

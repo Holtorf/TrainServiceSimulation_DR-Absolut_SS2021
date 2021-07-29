@@ -25,8 +25,8 @@ namespace TrainServiceSimulation
         IEnumerator StartSequence()
         {
             //_repairS.AddListenerSequenceFinishedEvent(OnRepairSequenceFinished);
-            yield return new WaitUntil(() => GameStarted == true);
-            //yield return new WaitForSeconds(1f); 
+            //yield return new WaitUntil(() => GameStarted == true);
+            yield return new WaitForSeconds(1f); 
             Debug.Log("GameStarted");
             _repairS.Init();
             _repairS.Begin();
@@ -35,6 +35,7 @@ namespace TrainServiceSimulation
         public void OnRepairSequenceFinished()
         {
             Debug.Log("RepairSequenceFinished");
+            _trainM.DestroyTrain();
             StartCoroutine(StartSequence());
         }
     }

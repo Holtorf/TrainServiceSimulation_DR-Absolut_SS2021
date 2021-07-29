@@ -182,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7861895699474490589, guid: 69a17f8922805b646b1a74e5b3bed23f, type: 3}
       propertyPath: m_Name
-      value: TrainMiddle (1)
+      value: TrainMiddle2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a17f8922805b646b1a74e5b3bed23f, type: 3}
@@ -255,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7861895699474490589, guid: 69a17f8922805b646b1a74e5b3bed23f, type: 3}
       propertyPath: m_Name
-      value: TrainMiddle
+      value: TrainMiddle1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a17f8922805b646b1a74e5b3bed23f, type: 3}
@@ -401,7 +401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7861895699474490589, guid: 69a17f8922805b646b1a74e5b3bed23f, type: 3}
       propertyPath: m_Name
-      value: TrainMiddle (2)
+      value: TrainMiddle3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a17f8922805b646b1a74e5b3bed23f, type: 3}

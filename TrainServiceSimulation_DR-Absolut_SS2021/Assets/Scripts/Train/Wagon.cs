@@ -77,6 +77,7 @@ namespace TrainServiceSimulation.Train
             _renderer = GetComponentInChildren<Renderer>();
         }
 
+
     }
 
 }

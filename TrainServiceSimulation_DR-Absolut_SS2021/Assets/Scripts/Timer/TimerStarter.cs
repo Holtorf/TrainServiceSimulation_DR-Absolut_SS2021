@@ -11,11 +11,13 @@ namespace TrainServiceSimulation
         [SerializeField]
         private TimeManger _timeM;
 
-        private void OnTriggerEnter(Collider StartGame)
+        private void OnTriggerEnter(Collider other)
         {
-            _timeM.IsTimerRunning = true;
-            _timeM.StartTime = Time.time;
-            Debug.Log("IGOR MEHR STROM");
+            if (other.CompareTag("StartGame"))
+            {
+                _timeM.IsTimerRunning = true;
+                _timeM.StartTime = Time.time;
+            }
         }
     }
 

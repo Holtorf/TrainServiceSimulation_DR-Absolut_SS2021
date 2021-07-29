@@ -44,6 +44,9 @@ namespace TrainServiceSimulation.Bay
             yield return new WaitUntil(() => _trainReachedDestination);
             _trainM.StartMaintenance();
             yield return new WaitUntil(() => _maintenanceFinished);
+            _trainM.MoveTrainToOrigin();
+            yield return new WaitUntil(() => _trainReachedOrigin);
+
         }
 
         void OnTrainReachedDestination()

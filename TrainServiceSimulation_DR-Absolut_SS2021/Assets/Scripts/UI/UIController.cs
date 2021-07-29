@@ -26,7 +26,6 @@ namespace TrainServiceSimulation.UI
         {
 
             _trainM.TrainNumber = (int)_trainSlider.value;
-            Debug.Log(_trainSlider.value);
          
         }
 

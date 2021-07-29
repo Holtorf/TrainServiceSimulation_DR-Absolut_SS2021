@@ -5,7 +5,7 @@ using UnityEngine;
 namespace TrainServiceSimulation.Train
 {
 
-    public class Train : MonoBehaviour
+    public class Trains : MonoBehaviour
     {
         
         //

@@ -41,7 +41,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8351116219826209996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9502e3cb6ebb17d48a86f542eabb8b9b, type: 2}
   m_CullingMode: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8351116219826209996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a83c0751d599b84087d41dfc18c0342, type: 3}
   m_Name: 
@@ -122,7 +122,7 @@ PrefabInstance:
     - target: {fileID: -4187237528884586406, guid: 360a0788f38fd2d4e963379f041d6111, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: b0edb53b2efbf5a45a842525dbd13d72, type: 2}
     - target: {fileID: 919132149155446097, guid: 360a0788f38fd2d4e963379f041d6111, type: 3}
       propertyPath: m_Name
       value: HandProto
