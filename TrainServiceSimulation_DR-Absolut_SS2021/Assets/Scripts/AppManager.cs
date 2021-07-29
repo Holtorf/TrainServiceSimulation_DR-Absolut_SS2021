@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TrainServiceSimulation.Train;
 using TrainServiceSimulation.Bay;
+using TrainServiceSimulation.FTS;
 
 namespace TrainServiceSimulation
 {
@@ -12,30 +13,32 @@ namespace TrainServiceSimulation
         private TrainManager _trainM;
         [SerializeField]
         private RepairSequence _repairS;
+        [SerializeField]
+        private FtsManager _ftsManager;
 
         private bool _gameStarted = false;
 
         public bool GameStarted { get => _gameStarted; set => _gameStarted = value; }
 
-        public void Start()
+        private void Awake()
         {
             StartCoroutine(StartSequence());
         }
 
         IEnumerator StartSequence()
         {
-            //_repairS.AddListenerSequenceFinishedEvent(OnRepairSequenceFinished);
+            _repairS.AddListenerSequenceFinishedEvent(OnRepairSequenceFinished);
             //yield return new WaitUntil(() => GameStarted == true);
-            yield return new WaitForSeconds(1f); 
-            Debug.Log("GameStarted");
+            yield return new WaitForSeconds(5f); 
             _repairS.Init();
             _repairS.Begin();
         }
 
         public void OnRepairSequenceFinished()
         {
-            Debug.Log("RepairSequenceFinished");
+            StopCoroutine(StartSequence());
             _trainM.DestroyTrain();
+            
             StartCoroutine(StartSequence());
         }
     }

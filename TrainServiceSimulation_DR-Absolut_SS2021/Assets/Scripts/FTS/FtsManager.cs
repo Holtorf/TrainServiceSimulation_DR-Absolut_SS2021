@@ -20,23 +20,27 @@ namespace TrainServiceSimulation.FTS
         [SerializeField]
         private WayPoint _startPoint;
 
+        [ReadOnly]
+        [SerializeField]
         private Wagon _wagon;
 
         private Vector3 _bayPosition;
         private Vector3 _wagonOriginalPosition;
 
         private Trains _train;
+        private bool _betweenTrains;
 
 
         private void Update()
         {
-            if (_wagon != null)
+            if (_wagon != null && !_betweenTrains)
             {
                 TakeWagonWithYou();
             }
-
+            
             if(_fts.transform.position == _startPoint.transform.position)
             {
+                StopAllCoroutines();
                 SearchNextJob();
             }
         }
@@ -45,6 +49,7 @@ namespace TrainServiceSimulation.FTS
         {
             _train = train;
 
+            _betweenTrains = false;
             SearchNextJob();
         }
 
@@ -59,59 +64,91 @@ namespace TrainServiceSimulation.FTS
             wagon.transform.position = _bayPosition;
 
             _serviceBay.StartCoroutine(_serviceBay.RepairWagon(_wagon, _wagonOriginalPosition));
+
             _wagon = null;
             SearchNextJob();
         }
 
         IEnumerator DriveToTrials(ServiceBay bays)
         {
-            
             _ftsMovement.DriveToDestination(bays.Wagon.transform.position);
             yield return new WaitUntil(() => _ftsMovement.IsMoving == false);
             _wagon = bays.Wagon;
             _ftsMovement.DriveToDestination(bays.OriginalPosition);
-            
-            yield return new WaitUntil(() => _ftsMovement.IsMoving == false);
+            yield return new WaitUntil(() => _ftsMovement.IsMoving == false); 
             bays.Wagon.transform.position = bays.OriginalPosition;
             bays.Wagon.State = Enums.EWagonState.NONE;
-            bays.ClearServiceBay();
+
             _wagon = null;
+            bays.ClearServiceBay();
             SearchNextJob();
         }
 
         public void SearchNextJob()
         {
-            foreach (Wagon wagon in _train.wagons)
+            if(_train != null)
             {
-                if (wagon.State == Enums.EWagonState.PENDING)
+                ClearFTS();
+                foreach (Wagon wagon in _train.Wagons)
                 {
-                    if (_bayActivater.TryGetBay(wagon.Type, out ServiceBay serviceBay))
+                    if (wagon.State == Enums.EWagonState.PENDING)
                     {
-                        _wagonOriginalPosition = wagon.transform.position;
-                        _serviceBay = serviceBay;
-                        _bayPosition = serviceBay.transform.position;
-                        StartCoroutine(DriveToBay(wagon));
+                        if (_bayActivater.TryGetBay(wagon.Type, out ServiceBay serviceBay))
+                        {
+                            _wagonOriginalPosition = wagon.transform.position;
+                            _serviceBay = serviceBay;
+                            _bayPosition = serviceBay.transform.position;
+                            StartCoroutine(DriveToBay(wagon));
+                            return;
+                        }
+                    }
+                }
+
+                foreach (ServiceBay bays in _bayActivater.Bays)
+                {
+                    if (bays.Wagon != null && bays.Wagon.State == Enums.EWagonState.COMPLETED)
+                    {
+                        StartCoroutine(DriveToTrials(bays));
                         return;
                     }
                 }
-            }
 
-            foreach (ServiceBay bays in _bayActivater.Bays)
-            {
-                if (bays.Wagon != null && bays.Wagon.State == Enums.EWagonState.COMPLETED)
-                {
-                    StartCoroutine(DriveToTrials(bays));
-                    return;
-                }
+                GetBackToStart();
+                
             }
-
-            //_ftsIsWorking = false;
-            _ftsMovement.DriveToDestination(_startPoint.transform.position);
         }
 
         public void TakeWagonWithYou()
         {
-            _wagon.transform.position = _fts.transform.position;
+            if(_wagon.State != Enums.EWagonState.NONE)
+            {
+                _wagon.transform.position = _fts.transform.position;
+            }
+            
+        }
+
+        private void GetBackToStart()
+        {
+            _ftsMovement.DriveToDestination(_startPoint.transform.position);
+            ClearFTS();
+        }
+
+        private void ClearFTS()
+        {
+            _wagon = null;
+            _wagonOriginalPosition = Vector3.zero;
+            _serviceBay = null;
+            _bayPosition = Vector3.zero;
+        }
+
+        public void ClearAll()
+        {
+            _train = null;
+            _wagon = null;
+            _wagonOriginalPosition = Vector3.zero;
+            _serviceBay = null;
+            _bayPosition = Vector3.zero;
+            _betweenTrains = true;
         }
 
     }

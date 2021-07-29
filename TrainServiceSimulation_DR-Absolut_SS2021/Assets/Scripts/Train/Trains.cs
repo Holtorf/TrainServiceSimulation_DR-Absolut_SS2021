@@ -7,10 +7,11 @@ namespace TrainServiceSimulation.Train
 
     public class Trains : MonoBehaviour
     {
-        
+
         //
-        public List<Wagon> wagons = new List<Wagon>();
-        
+        [SerializeField]
+        private List<Wagon> wagons = new List<Wagon>();
+
         //
         private float _decoupleTime = 1f;
 
@@ -22,32 +23,33 @@ namespace TrainServiceSimulation.Train
 
         public bool FinishedDecoupling { get => _finishedDecoupling; set => _finishedDecoupling = value; }
         public bool FinishedCoupling { get => _finishedCoupling; set => _finishedCoupling = value; }
+        public List<Wagon> Wagons { get => wagons; set => wagons = value; }
 
         //function to decouple the diffrent wagoons from the train
         public void Decouple()
         {
-            LeanTween.value(0f, 1f, _decoupleTime * wagons.Count - 1).setOnComplete(() =>
+            LeanTween.value(0f, 1f, _decoupleTime * Wagons.Count - 1).setOnComplete(() =>
             {
                 FinishedDecoupling = true;
             });
-            for (int i = 0; i < wagons.Count - 1; i++)
+            for (int i = 0; i < Wagons.Count - 1; i++)
             {
-                float wMove = wagons[i].transform.position.x - (wagons.Count - 1 * i);
-                LeanTween.moveX(wagons[i].gameObject, wMove, _decoupleTime).setDelay(i * _decoupleTime);
+                float wMove = Wagons[i].transform.position.x - (Wagons.Count - 1 * i);
+                LeanTween.moveX(Wagons[i].gameObject, wMove, _decoupleTime).setDelay(i * _decoupleTime);
             }
         }
 
         //function to couple the diffrent wagoons after the RepairSequenz from the train
         public void Couple()
         {
-            LeanTween.value(0f, 1f, _decoupleTime * wagons.Count - 1).setOnComplete(() =>
+            LeanTween.value(0f, 1f, _decoupleTime * Wagons.Count - 1).setOnComplete(() =>
             {
                 FinishedCoupling = true;
             });
-            for (int i = wagons.Count - 1; i >= 0; i--)
+            for (int i = Wagons.Count - 1; i >= 0; i--)
             {
-                float wMove = wagons[i].transform.position.x + (wagons.Count - 1 * i);
-                LeanTween.moveX(wagons[i].gameObject, wMove, _decoupleTime).setDelay((wagons.Count - 1) - i * _decoupleTime);
+                float wMove = Wagons[i].transform.position.x + (Wagons.Count - 1 * i);
+                LeanTween.moveX(Wagons[i].gameObject, wMove, _decoupleTime).setDelay((Wagons.Count - 1) - i * _decoupleTime);
             }
         }
     }

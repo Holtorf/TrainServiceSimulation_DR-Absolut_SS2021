@@ -18,9 +18,14 @@ namespace TrainServiceSimulation.Bay
         [SerializeField]
         private int _workingTime;
 
+        [ReadOnly]
+        [SerializeField]
         private bool _isOccupied;
 
+        [ReadOnly]
+        [SerializeField]
         private Wagon _wagon;
+
         private Vector3 _originalPosition;
 
 
@@ -32,19 +37,23 @@ namespace TrainServiceSimulation.Bay
 
         public IEnumerator RepairWagon(Wagon wagon, Vector3 originalPosition)
         {
-            _isOccupied = true;
-            Wagon = wagon;
-            OriginalPosition = originalPosition;
-            wagon.State = EWagonState.WORKING;
-            yield return new WaitForSeconds(_workingTime);
-            wagon.State = EWagonState.COMPLETED;
+            if(wagon != null)
+            {
+                _isOccupied = true;
+                _wagon = wagon;
+                OriginalPosition = originalPosition;
+                wagon.State = EWagonState.WORKING;
+                yield return new WaitForSeconds(_workingTime);
+                wagon.State = EWagonState.COMPLETED;
+            }
+            
         }
 
 
         public void ClearServiceBay()
         {
             _isOccupied = false;
-            //_wagon = null;
+            _wagon = null;
             _originalPosition = Vector3.zero;
         }
     }

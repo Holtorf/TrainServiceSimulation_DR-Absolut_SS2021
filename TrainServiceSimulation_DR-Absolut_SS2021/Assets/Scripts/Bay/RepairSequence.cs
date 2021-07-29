@@ -36,6 +36,7 @@ namespace TrainServiceSimulation.Bay
             _trainM.AddListenerTrainReachedDestinationEvent(OnTrainReachedDestination);
             _trainM.AddListenerTrainReachedOriginEvent(OnTrainReachedOrigin);
             _trainM.AddListenerMaintenanceFinishedEvent(OnMaintenanceFinished);
+            
         }
 
         IEnumerator PlaySequence()
@@ -46,6 +47,7 @@ namespace TrainServiceSimulation.Bay
             yield return new WaitUntil(() => _maintenanceFinished);
             _trainM.MoveTrainToOrigin();
             yield return new WaitUntil(() => _trainReachedOrigin);
+            _sequenceFinishedEvent.Invoke();
 
         }
 

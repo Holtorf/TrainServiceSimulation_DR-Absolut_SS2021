@@ -33,7 +33,7 @@ namespace TrainServiceSimulation.Bay
 
         public void OnValueChanged()
         {
-            BayCount = (int)_baySlider.value;
+            _bayCount = (int)_baySlider.value;
             BayCountChange();
         }
 

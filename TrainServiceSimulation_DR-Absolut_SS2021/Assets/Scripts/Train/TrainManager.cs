@@ -13,12 +13,12 @@ namespace TrainServiceSimulation.Train
     {
         [SerializeField] 
         private TimeManger _timeM;
-
         [SerializeField]
         private FtsMovement _ftsMovement;
-
         [SerializeField]
         private FtsManager _ftsManager;
+        [SerializeField]
+        private AppManager _appManager;
 
         [SerializeField] 
         private List<Trains> _trains = new List<Trains>();
@@ -30,12 +30,11 @@ namespace TrainServiceSimulation.Train
         [SerializeField]
         private float _trainMoveTime = 10f;
 
+        [ReadOnly]
+        [SerializeField]
         private Trains _currentTrain;
 
-        private int _trainNumber = 2;
-
-        //[SerializeField, Tooltip("ServiceTypOrder: Cleaning,Electric,Interior,Problems,Quality")] 
-        //private BayManager[] _bays;
+        private int _trainNumber = 3;
 
         private UnityEvent _trainReachedDestinationEvent;
         private UnityEvent _trainReachedOriginEvent;
@@ -55,7 +54,7 @@ namespace TrainServiceSimulation.Train
         public void InitTrain()
         {
             _currentTrain = Instantiate(_trains[TrainNumber], _trainOrigin.position, Quaternion.identity);
-            foreach (Wagon _wagon in _currentTrain.wagons)
+            foreach (Wagon _wagon in _currentTrain.Wagons)
             {
                 _wagon.InitWagon();
             }
@@ -70,7 +69,7 @@ namespace TrainServiceSimulation.Train
         {
             _currentTrain.Decouple();
             yield return new WaitUntil(() => _currentTrain.FinishedDecoupling);
-            foreach (Wagon _wagon in _currentTrain.wagons)
+            foreach (Wagon _wagon in _currentTrain.Wagons)
             {
                 _wagon.State = Enums.EWagonState.PENDING;
             }
@@ -79,10 +78,11 @@ namespace TrainServiceSimulation.Train
             _ftsManager.InitFtsManager(_currentTrain);
 
             _startWorkingEvent.Invoke();
-            yield return new WaitUntil(() => _currentTrain.wagons.All<Wagon>(x => x.State == Enums.EWagonState.NONE));
+            yield return new WaitUntil(() => _currentTrain.Wagons.All<Wagon>(x => x.State == Enums.EWagonState.NONE));
 
             _currentTrain.Couple();
             yield return new WaitUntil(() => _currentTrain.FinishedCoupling);
+            _ftsManager.StopAllCoroutines();
             _maintenanceFinishedEvent.Invoke();
         }
 
@@ -106,6 +106,8 @@ namespace TrainServiceSimulation.Train
         {
             Destroy(_currentTrain.gameObject);
             _timeM.IsTimerRunning = false;
+            _ftsManager.ClearAll();
+            _appManager.StopAllCoroutines();
         }
         public void AddListenerTrainReachedDestinationEvent(UnityAction call)
         {
