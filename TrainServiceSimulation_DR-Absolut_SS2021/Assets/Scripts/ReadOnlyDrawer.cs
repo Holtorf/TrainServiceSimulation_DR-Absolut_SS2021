@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEditor;
 /// <summary>
 /// This class contain custom drawer for ReadOnly attribute.
+/// 
+/// This Script is from: https://www.patrykgalach.com/2020/01/20/readonly-attribute-in-unity-editor/
+/// 
 /// </summary>
 [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
 public class ReadOnlyDrawer : PropertyDrawer
