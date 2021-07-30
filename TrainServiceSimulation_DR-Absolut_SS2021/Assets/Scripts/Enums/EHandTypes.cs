@@ -1,5 +1,8 @@
 namespace TrainServiceSimulation.Enums
 {
+    /// <summary>
+    /// Enum to diffrent the left and Right hand for the Animation
+    /// </summary>
     public enum HandTypes
     {
         /// <summary>

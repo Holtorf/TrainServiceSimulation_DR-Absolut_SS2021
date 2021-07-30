@@ -5,16 +5,27 @@ using TrainServiceSimulation.Enums;
 
 namespace TrainServiceSimulation.Train
 {
+    /// <summary>
+    /// Class to give each wagon a state and a service type
+    /// </summary>
     public class Wagon : MonoBehaviour
     {
+        /// <summary>
+        /// Connection to the right material of each wagon
+        /// </summary>
         [SerializeField]
         private Renderer _renderer;
-        [SerializeField]
+
+        /// <summary>
+        /// Connection to the enums type and state
+        /// </summary>
         private EWagonState _state;
-        [SerializeField]
         private EServiceType _type;
 
-       public EWagonState State
+        /// <summary>
+        /// function to declare what should happen with the wagon in each state
+        /// </summary>
+        public EWagonState State
         {
             get
             {
@@ -37,6 +48,9 @@ namespace TrainServiceSimulation.Train
             }
         }
 
+        /// <summary>
+        /// function to declare what should happen with each wagon in each service type
+        /// </summary>
         public EServiceType Type
         {
             get
@@ -69,6 +83,9 @@ namespace TrainServiceSimulation.Train
             }
         }
 
+        /// <summary>
+        /// function to initiate a wagon
+        /// </summary>
         public void InitWagon()
         {
             State = EWagonState.NONE;
