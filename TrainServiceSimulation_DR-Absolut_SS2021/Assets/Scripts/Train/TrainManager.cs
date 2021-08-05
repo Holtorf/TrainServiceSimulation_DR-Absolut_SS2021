@@ -105,7 +105,6 @@ namespace TrainServiceSimulation.Train
         public void DestroyTrain()
         {
             Destroy(_currentTrain.gameObject);
-            _timeM.IsTimerRunning = false;
             _ftsManager.ClearAll();
             _appManager.StopAllCoroutines();
         }

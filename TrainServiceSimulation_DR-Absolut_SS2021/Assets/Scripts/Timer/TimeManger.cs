@@ -25,6 +25,11 @@ namespace TrainServiceSimulation
         private float _startTime;
 
         /// <summary>
+        /// The flaot that give the time 
+        /// </summary>
+        private float _time;
+
+        /// <summary>
         /// Bool to clarify when the timer is active and running
         /// </summary>        
         private bool _isTimerRunning = false;
@@ -43,17 +48,19 @@ namespace TrainServiceSimulation
         /// Getter and Setter for _startTime to use it in other classes too
         /// </summary>
         public float StartTime { get => _startTime; set => _startTime = value; }
+        
         /// <summary>
-        /// Getter and Setter for _isTimerRunning to use it in other classes too
+        /// Getter and Setter to use privates in other classes
         /// </summary>
         public bool IsTimerRunning { get => _isTimerRunning; set => _isTimerRunning = value; }
+        public float Timeing { get => _time; set => _time = value; }
 
         /// <summary>
         /// Set the time scale of the entire scene at the before defined value in the inspector
         /// </summary>
         private void Awake()
         {
-            Time.timeScale = _speedSlider.value;
+            UnityEngine.Time.timeScale = _speedSlider.value;
         }
 
         /// <summary>
@@ -63,10 +70,10 @@ namespace TrainServiceSimulation
         {
             if (IsTimerRunning)
             {
-                float t = Time.time - StartTime;
+                Timeing = (UnityEngine.Time.time - StartTime);
 
-                string minutes = ((int)t / 60).ToString();
-                string seconds = (t % 60).ToString("f2");
+                string minutes = ((int)Timeing / 60).ToString();
+                string seconds = (Timeing % 60).ToString("f2");
 
                 _timerText.text = minutes + ":" + seconds;
             }
@@ -89,11 +96,11 @@ namespace TrainServiceSimulation
 
             if (_isPaused)
             {
-                Time.timeScale = 0;
+                UnityEngine.Time.timeScale = 0;
             }
             else
             {
-                Time.timeScale = _speedSlider.value;
+                UnityEngine.Time.timeScale = _speedSlider.value;
             }
 
         }
@@ -105,7 +112,7 @@ namespace TrainServiceSimulation
         {
             if (!_isPaused)
             {
-                Time.timeScale = _speedSlider.value;
+                UnityEngine.Time.timeScale = _speedSlider.value;
             }   
         }
     }

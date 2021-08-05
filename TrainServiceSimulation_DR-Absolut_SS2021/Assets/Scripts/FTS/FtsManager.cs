@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TrainServiceSimulation.Train;
 using TrainServiceSimulation.Bay;
+using TMPro;
 
 namespace TrainServiceSimulation.FTS
 {
@@ -14,6 +15,8 @@ namespace TrainServiceSimulation.FTS
         private FtsMovement _ftsMovement;
         [SerializeField]
         private GameObject _fts;
+        [SerializeField]
+        private AppManager _appManager;
         
         private ServiceBay _serviceBay;
 
@@ -79,6 +82,7 @@ namespace TrainServiceSimulation.FTS
             bays.Wagon.transform.position = bays.OriginalPosition;
             bays.Wagon.State = Enums.EWagonState.NONE;
 
+            _appManager.WagonCount++;
             _wagon = null;
             bays.ClearServiceBay();
             SearchNextJob();

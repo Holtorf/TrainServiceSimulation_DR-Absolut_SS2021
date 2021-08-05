@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TrainServiceSimulation.Train{
+namespace TrainServiceSimulation.Train
+{
     public class SimulationStart : MonoBehaviour
     {
         [SerializeField]
@@ -12,7 +13,7 @@ namespace TrainServiceSimulation.Train{
         {
             if (other.CompareTag("StartGame"))
             {
-                _appM.GameStarted = true;
+                _appM.StartCoroutine(_appM.StartSequence());
             }
 
         }
