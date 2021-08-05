@@ -6,7 +6,6 @@ using TrainServiceSimulation.Enums;
 
 public class TeleportationController : MonoBehaviour
 {
-    #region Serialized Fields
 
     /// <summary>
     /// How much the stick must be moved to activate the line
@@ -20,10 +19,6 @@ public class TeleportationController : MonoBehaviour
     [SerializeField, Tooltip("What kind of hand is it")]
     private HandTypes handType = HandTypes.LEFT;
 
-    #endregion
-
-    #region Private Attributes
-
     /// <summary>
     /// The input device that controls that hand
     /// </summary>
@@ -34,12 +29,7 @@ public class TeleportationController : MonoBehaviour
     /// </summary>
     private XRInteractorLineVisual lineVisual;
 
-    #endregion
-
-    #region MonoBehaviour implementation
-
     /// <summary>
-    /// Start is called before the first frame update
     /// Search for an fitting input device and the line visual
     /// </summary>
     private void Start()
@@ -55,16 +45,11 @@ public class TeleportationController : MonoBehaviour
         {
             inputDevice = inputDevices[0];
         }
-        else
-        {
-            //TODO: Error when no input device was found
-        }
 
         lineVisual = GetComponent<XRInteractorLineVisual>();
     }
 
     /// <summary>
-    /// Update is called once per frame
     /// Checks whether the input is higher than the deadzone and shows the line accordingly
     /// </summary>
     private void Update()
@@ -74,6 +59,5 @@ public class TeleportationController : MonoBehaviour
         lineVisual.enabled = axisInput.y > deadzone;
     }
 
-    #endregion
 
 }

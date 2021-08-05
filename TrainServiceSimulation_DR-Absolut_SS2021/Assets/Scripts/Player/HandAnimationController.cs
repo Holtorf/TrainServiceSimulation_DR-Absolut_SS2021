@@ -7,8 +7,6 @@ using TrainServiceSimulation.Enums;
 public class HandAnimationController : MonoBehaviour
 {
 
-    #region Serialized Fields
-
     /// <summary>
     /// Is it a Left or a Right hand
     /// </summary>
@@ -33,10 +31,6 @@ public class HandAnimationController : MonoBehaviour
     [SerializeField, Tooltip("The animator of the hand (when not set in inspector, it will be retrieved in Start)")]
     private Animator animator;
 
-    #endregion
-
-    #region Private Attributes
-
     /// <summary>
     /// The device that controls the hand
     /// </summary>
@@ -57,12 +51,7 @@ public class HandAnimationController : MonoBehaviour
     /// </summary>
     private float threeFingersValue;
 
-    #endregion
-
-    #region MonoBehaviour implementation
-
     /// <summary>
-    /// Start is called before the first frame update
     /// Searches for the animator and checks if an input device is connected
     /// </summary>
     private void Start()
@@ -75,17 +64,12 @@ public class HandAnimationController : MonoBehaviour
     }
 
     /// <summary>
-    /// Update is called once per frame
     /// Animating the hand
     /// </summary>
     private void Update()
     {
         AnimateHand();
     }
-
-    #endregion
-
-    #region Private Methods
 
     /// <summary>
     /// Get the desired input device based on the hand type
@@ -142,7 +126,5 @@ public class HandAnimationController : MonoBehaviour
             animator.SetFloat("ThreeFingers", threeFingersValue);
         }
     }
-
-    #endregion
 
 }
