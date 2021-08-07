@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TrainServiceSimulation.Enums;
+using TrainServiceSimulation.Train;
 
 namespace TrainServiceSimulation.Bay
 {

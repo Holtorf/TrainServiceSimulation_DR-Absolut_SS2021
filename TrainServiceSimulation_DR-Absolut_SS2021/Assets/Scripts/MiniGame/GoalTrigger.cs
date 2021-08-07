@@ -22,7 +22,6 @@ namespace TrainServiceSimulation.MiniGame
             if (other.CompareTag("MiniGame"))
             {
                 _serviceBay.WorkingMultipli = 0.5f;
-                _labyrinthController.ResetLabyrinth();
                 _miniGameController.GameLight.GetComponent<Renderer>().materials[0].color = Color.green;
             }
         }

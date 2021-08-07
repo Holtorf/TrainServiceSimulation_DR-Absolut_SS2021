@@ -16,6 +16,7 @@ namespace TrainServiceSimulation.MiniGame
         {
             _marbleStartPosition = _marble.transform.position;
             _labyrintStartPosition = gameObject.transform.position;
+            ResetLabyrinth();
         }
 
         public void ResetLabyrinth()

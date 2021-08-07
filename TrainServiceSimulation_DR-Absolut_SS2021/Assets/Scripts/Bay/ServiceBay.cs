@@ -20,8 +20,8 @@ namespace TrainServiceSimulation.Bay
         [SerializeField]
         private float _workingTime;
 
-        [ReadOnly]
-        [SerializeField]
+        //[ReadOnly]
+        //[SerializeField]
         private float _restWorkingtime;
 
         private float _workingMultipli = 1f;
@@ -35,11 +35,11 @@ namespace TrainServiceSimulation.Bay
         [SerializeField]
         private AudioSource _audioSource;
 
-        [ReadOnly]
-        [SerializeField]
+        //[ReadOnly]
+        //[SerializeField]
         private bool _isOccupied;
 
-        [ReadOnly]
+        //[ReadOnly]
         [SerializeField]
         private Wagon _wagon;
 

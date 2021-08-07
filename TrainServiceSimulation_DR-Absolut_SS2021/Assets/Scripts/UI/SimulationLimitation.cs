@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using TrainServiceSimulation.Train;
 
 public class SimulationLimitation : MonoBehaviour
     {
@@ -10,6 +11,9 @@ public class SimulationLimitation : MonoBehaviour
         private TextMeshProUGUI _trainLimitTMPro;
         [SerializeField]
         private TextMeshProUGUI _timeLimitTMPro;
+
+        [SerializeField]
+        private SimulationStart _simulationStart;
 
         [SerializeField]
         private Slider _trainLimitSlider;
@@ -26,13 +30,20 @@ public class SimulationLimitation : MonoBehaviour
 
         public void TrainLimitChange()
         {
-            _trainLimit = (int)_trainLimitSlider.value;
-            _trainLimitTMPro.text = "Max. Trains: " + _trainLimit;
+            if (_simulationStart.SimulationIsRunning == false)
+            {
+                _trainLimit = (int)_trainLimitSlider.value;
+                _trainLimitTMPro.text = "Max. Trains: " + _trainLimit;
+            }
+            
         }
 
         public void TimeLimitChange()
         {
-            _timeLimit = (int)_timeLimitSlider.value;
-            _timeLimitTMPro.text = "Max. Time:" + _timeLimit;
+            if (_simulationStart.SimulationIsRunning == false)
+            {
+                _timeLimit = (int)_timeLimitSlider.value;
+                _timeLimitTMPro.text = "Max. Time:" + _timeLimit;
+            }
         }
 }

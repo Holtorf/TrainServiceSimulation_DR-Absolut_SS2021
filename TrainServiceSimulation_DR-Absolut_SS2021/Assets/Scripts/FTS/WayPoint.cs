@@ -19,7 +19,7 @@ namespace TrainServiceSimulation.FTS
         /// Array of the path costs to the nearest Waypoints
         /// same order than _neighbours[]
         /// </summary>
-        [ReadOnly]
+        //[ReadOnly]
         [SerializeField]
         private double[] _parthCosts;
 

@@ -9,11 +9,16 @@ namespace TrainServiceSimulation.Train
         [SerializeField]
         private AppManager _appM;
 
+        private bool _simulationIsRunning = false;
+
+        public bool SimulationIsRunning { get => _simulationIsRunning; set => _simulationIsRunning = value; }
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("StartGame"))
             {
                 _appM.StartCoroutine(_appM.StartSequence());
+                _simulationIsRunning = true;
             }
 
         }

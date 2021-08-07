@@ -23,8 +23,8 @@ namespace TrainServiceSimulation.FTS
         [SerializeField]
         private WayPoint _startPoint;
 
-        [ReadOnly]
-        [SerializeField]
+        //[ReadOnly]
+        //[SerializeField]
         private Wagon _wagon;
 
         private Vector3 _bayPosition;

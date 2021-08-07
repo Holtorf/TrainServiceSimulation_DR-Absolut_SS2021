@@ -23,15 +23,17 @@ namespace TrainServiceSimulation.Train
         [SerializeField] 
         private List<Trains> _trains = new List<Trains>();
         [SerializeField]
-        private Transform _trainOrigin;
+        private Transform[] _trainOrigin;
         [SerializeField]
-        private Transform _trainDestination;
+        private Transform[] _trainDestination;
+
+        private int _randOrigin;
 
         [SerializeField]
         private float _trainMoveTime = 10f;
 
-        [ReadOnly]
-        [SerializeField]
+        //[ReadOnly]
+        //[SerializeField]
         private Trains _currentTrain;
 
         private int _trainNumber = 0;
@@ -53,7 +55,8 @@ namespace TrainServiceSimulation.Train
 
         public void InitTrain()
         {
-            _currentTrain = Instantiate(_trains[TrainNumber], _trainOrigin.position, Quaternion.identity);
+            _randOrigin = Random.Range(0, _trainOrigin.Length);
+            _currentTrain = Instantiate(_trains[TrainNumber], _trainOrigin[_randOrigin].position, Quaternion.identity);
             foreach (Wagon _wagon in _currentTrain.Wagons)
             {
                 _wagon.InitWagon();
@@ -88,7 +91,7 @@ namespace TrainServiceSimulation.Train
 
         public void MoveTrainToDestination()
         {
-            LeanTween.move(_currentTrain.gameObject, _trainDestination.position, _trainMoveTime).setEaseInOutExpo().setOnComplete(() =>
+            LeanTween.move(_currentTrain.gameObject, _trainDestination[_randOrigin].position, _trainMoveTime).setEaseInOutExpo().setOnComplete(() =>
             {
                 _trainReachedDestinationEvent.Invoke();
             });
@@ -96,7 +99,7 @@ namespace TrainServiceSimulation.Train
 
         public void MoveTrainToOrigin()
         {
-            LeanTween.move(_currentTrain.gameObject, _trainOrigin.position, _trainMoveTime).setEaseInOutExpo().setOnComplete(() =>
+            LeanTween.move(_currentTrain.gameObject, _trainOrigin[_randOrigin].position, _trainMoveTime).setEaseInOutExpo().setOnComplete(() =>
             {
                 _trainReachedOriginEvent.Invoke();
             });

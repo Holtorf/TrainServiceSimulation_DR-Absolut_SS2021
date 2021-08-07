@@ -27,12 +27,12 @@ namespace TrainServiceSimulation
 
         private int _wagonCount;
 
-        [ReadOnly]
-        [SerializeField]
+        //[ReadOnly]
+        //[SerializeField]
         private bool _useTime = false;
 
-        [ReadOnly]
-        [SerializeField]
+        //[ReadOnly]
+        //[SerializeField]
         private bool _useTrain = false;
 
         private bool _noActiveTrain = false;
@@ -58,11 +58,9 @@ namespace TrainServiceSimulation
             {
                 _noActiveTrain = true;
                 _repairS.AddListenerSequenceFinishedEvent(OnRepairSequenceFinished);
-                Debug.Log("I got Started");
 
                 if (UseTime)
                 {
-                    Debug.Log("Ich bin in der Zeit schleife");
 
                     if (_timeManager.Timeing <= _simulationLimitation.TimeLimit*60)
                     {
