@@ -43,7 +43,7 @@ namespace TrainServiceSimulation
 
         private void Update()
         {
-            if(_timeManager.Timeing >= _simulationLimitation.TimeLimit*60)
+            if(_timeManager.Timeing >= _simulationLimitation.TimeLimit*60 && _useTime == true)
             {
                 _timeManager.IsTimerRunning = false;
                 Time.timeScale = 0;

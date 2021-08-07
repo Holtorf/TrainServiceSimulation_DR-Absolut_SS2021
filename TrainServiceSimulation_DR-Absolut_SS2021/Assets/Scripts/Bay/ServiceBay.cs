@@ -20,7 +20,14 @@ namespace TrainServiceSimulation.Bay
         [SerializeField]
         private float _workingTime;
 
+        [ReadOnly]
+        [SerializeField]
+        private float _restWorkingtime;
+
         private float _workingMultipli = 1f;
+
+        private bool _workingFinished = false;
+        private bool _startWorking;
 
         [SerializeField]
         private MiniGameController _miniGameController;
@@ -45,17 +52,35 @@ namespace TrainServiceSimulation.Bay
         public Vector3 OriginalPosition { get => _originalPosition; set => _originalPosition = value; }
         public float WorkingMultipli { get => _workingMultipli; set => _workingMultipli = value; }
 
+        private void Update()
+        {
+            if (_startWorking)
+            {
+                _restWorkingtime = _restWorkingtime*_workingMultipli - 1*Time.deltaTime;
+                
+                if (_restWorkingtime <= 0)
+                {
+
+                    _workingFinished = true;
+                    _startWorking = false;
+                    return;
+                }
+            }
+        }
+
         public IEnumerator RepairWagon(Wagon wagon, Vector3 originalPosition)
         {
             if(wagon != null)
             {
+                _restWorkingtime = _workingTime;
                 _audioSource.Play();
+                _startWorking = true;
                 _miniGameController.SetActivateLabyrinth();
                 _isOccupied = true;
                 _wagon = wagon;
                 OriginalPosition = originalPosition;
                 wagon.State = EWagonState.WORKING;
-                yield return new WaitForSeconds(_workingTime*_workingMultipli);
+                yield return new WaitUntil(() => _workingFinished == true);
                 wagon.State = EWagonState.COMPLETED;
                 _audioSource.Stop();
             }
@@ -66,6 +91,7 @@ namespace TrainServiceSimulation.Bay
         public void ClearServiceBay()
         {
             _workingMultipli = 1f;
+            _workingFinished = false;
             _isOccupied = false;
             _wagon = null;
             _originalPosition = Vector3.zero;

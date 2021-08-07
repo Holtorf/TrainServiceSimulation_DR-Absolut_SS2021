@@ -34,7 +34,7 @@ namespace TrainServiceSimulation.Train
         [SerializeField]
         private Trains _currentTrain;
 
-        private int _trainNumber = 1;
+        private int _trainNumber = 0;
 
         private UnityEvent _trainReachedDestinationEvent;
         private UnityEvent _trainReachedOriginEvent;

@@ -9,16 +9,19 @@ namespace TrainServiceSimulation.MiniGame
         [SerializeField]
         private GameObject _marble;
 
+        private Vector3 _labyrintStartPosition;
         private Vector3 _marbleStartPosition;
 
         private void Awake()
         {
             _marbleStartPosition = _marble.transform.position;
+            _labyrintStartPosition = gameObject.transform.position;
         }
 
         public void ResetLabyrinth()
         {
             _marble.transform.position = _marbleStartPosition;
+            gameObject.transform.position = _labyrintStartPosition;
         }
 
 
