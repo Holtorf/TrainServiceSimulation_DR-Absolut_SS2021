@@ -1,14 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TrainServiceSimulation.Enums;
-using TrainServiceSimulation.Train;
 using TrainServiceSimulation.FTS;
 using TrainServiceSimulation.MiniGame;
-using UnityEngine.Audio;
+using TrainServiceSimulation.Train;
+using UnityEngine;
 
 namespace TrainServiceSimulation.Bay
 {
+    /// <summary>
+    /// The class that controled every Service Bay
+    /// Its give the Bay its Type and other informations and indicates how its have to handle 
+    /// a wagon when the bay gets one
+    /// </summary>
     public class ServiceBay : MonoBehaviour
     {
         [SerializeField]
@@ -20,8 +23,8 @@ namespace TrainServiceSimulation.Bay
         [SerializeField]
         private float _workingTime;
 
-        //[ReadOnly]
-        //[SerializeField]
+        [ReadOnly]
+        [SerializeField]
         private float _restWorkingtime;
 
         private float _workingMultipli = 1f;
@@ -35,16 +38,15 @@ namespace TrainServiceSimulation.Bay
         [SerializeField]
         private AudioSource _audioSource;
 
-        //[ReadOnly]
-        //[SerializeField]
+        [ReadOnly]
+        [SerializeField]
         private bool _isOccupied;
 
-        //[ReadOnly]
+        [ReadOnly]
         [SerializeField]
         private Wagon _wagon;
 
         private Vector3 _originalPosition;
-
 
         public EServiceType EServiceType { get => _eServiceType; set => _eServiceType = value; }
         public bool IsOccupied { get => _isOccupied; set => _isOccupied = value; }
@@ -52,6 +54,9 @@ namespace TrainServiceSimulation.Bay
         public Vector3 OriginalPosition { get => _originalPosition; set => _originalPosition = value; }
         public float WorkingMultipli { get => _workingMultipli; set => _workingMultipli = value; }
 
+        /// <summary>
+        /// Contoll when the working time is finished
+        /// </summary>
         private void Update()
         {
             if (_startWorking)
@@ -60,7 +65,6 @@ namespace TrainServiceSimulation.Bay
                 
                 if (_restWorkingtime <= 0)
                 {
-
                     _workingFinished = true;
                     _startWorking = false;
                     return;
@@ -68,6 +72,9 @@ namespace TrainServiceSimulation.Bay
             }
         }
 
+        /// <summary>
+        /// Coroutine that indicates what the Service Bay is doing when its get a wagon from the FTS
+        /// </summary>
         public IEnumerator RepairWagon(Wagon wagon, Vector3 originalPosition)
         {
             if(wagon != null)
@@ -87,7 +94,9 @@ namespace TrainServiceSimulation.Bay
             
         }
 
-
+        /// <summary>
+        /// Function that cleared the Service Bay after the wagon is get back to the trails
+        /// </summary>
         public void ClearServiceBay()
         {
             _workingMultipli = 1f;

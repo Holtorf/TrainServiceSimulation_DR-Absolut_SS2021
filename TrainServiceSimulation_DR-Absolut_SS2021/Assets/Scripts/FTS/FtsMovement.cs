@@ -4,27 +4,45 @@ using UnityEngine;
 
 namespace TrainServiceSimulation.FTS
 {
+    /// <summary>
+    /// Class to controle how the FTS ist moving through the scene
+    /// </summary>
     public class FtsMovement : MonoBehaviour
     {
+
         [SerializeField]
         private SearchGraphManager _searchGraphManager;
-
         [SerializeField]
         private AStar _aStar;
-
+        
         [SerializeField]
-        private bool drawLine;
+        private bool drawLine = true;
 
+        /// <summary>
+        /// speedmodifier for the FTS movement
+        /// </summary>
         [SerializeField]
-        private float _speed = 50;
+        private float _speed = 30;
 
+        /// <summary>
+        /// bool to check if the FTS is moving
+        /// this check is importend so the FTS get no new Jobs when its moving
+        /// </summary>
         [SerializeField]
         private bool _isMoving;
 
+        /// <summary>
+        ///  the variable with what the FTS is moving through the scene
+        /// </summary>
         private float _movement;
 
         public bool IsMoving { get => _isMoving;}
 
+        /// <summary>
+        /// Function that is giving getting the positions from the _searchGraphManager() of the start and end point and give it to the
+        /// FindPath() from the AStar class
+        /// && drawing the shortest path for the user
+        /// </summary>
         public void DriveToDestination(Vector3 endPoint)
         {
             WayPoint start = _searchGraphManager.GetClosestWayPoint(transform.position);
@@ -44,6 +62,9 @@ namespace TrainServiceSimulation.FTS
             }
         }
 
+        /// <summary>
+        /// Function that is moving the FTS along the shortestPath of the AStar Class
+        /// </summary>
         private void MoveFTS(int index)
         {
             if(index >= _aStar.ShortestPath.Count)

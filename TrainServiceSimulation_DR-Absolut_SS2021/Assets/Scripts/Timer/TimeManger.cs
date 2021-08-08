@@ -9,7 +9,7 @@ using UnityEngine.UI;
 /// Class to manage all the time relevant infos
 /// </summary>
 
-namespace TrainServiceSimulation
+namespace TrainServiceSimulation.Timer
 {
     public class TimeManger : MonoBehaviour
     {
@@ -88,7 +88,7 @@ namespace TrainServiceSimulation
         }
 
         /// <summary>
-        /// Button function to paused everything in the scene that used the timeScale to work
+        /// Button function to toggle between pause and play
         /// </summary>
         public void TogglePause()
         {

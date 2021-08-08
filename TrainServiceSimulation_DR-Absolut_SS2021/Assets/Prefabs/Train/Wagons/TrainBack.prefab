@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599381091042463888}
   - component: {fileID: -5020570492873787181}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TrainBack
   m_TagString: Train
   m_Icon: {fileID: 0}
@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 1015977783922593234}
-  _state: 0
-  _type: 0
 --- !u!1001 &1862502090552086870
 PrefabInstance:
   m_ObjectHideFlags: 0

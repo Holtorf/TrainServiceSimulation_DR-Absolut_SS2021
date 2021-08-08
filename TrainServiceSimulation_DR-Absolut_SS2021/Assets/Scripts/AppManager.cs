@@ -6,11 +6,19 @@ using TrainServiceSimulation.Train;
 using TrainServiceSimulation.Bay;
 using TrainServiceSimulation.FTS;
 using TrainServiceSimulation.UI;
+using TrainServiceSimulation.Timer;
 
 namespace TrainServiceSimulation
 {
+    /// <summary>
+    /// The Main Class for the Simulation
+    /// it has all connection to the managers an started and end the simulation
+    /// </summary>
     public class AppManager : MonoBehaviour
     {
+        /// <summary>
+        /// Connection to other classes
+        /// </summary>
         [SerializeField]
         private TrainManager _trainM;
         [SerializeField]
@@ -22,25 +30,33 @@ namespace TrainServiceSimulation
         [SerializeField]
         private TimeManger _timeManager;
 
+        /// <summary>
+        /// Connection to the Train Count text to change it at the end
+        /// of every Train lifecyrcle
+        /// </summary>
         [SerializeField]
         private TextMeshProUGUI _trainCounterTMPro;
 
         private int _wagonCount;
 
-        //[ReadOnly]
-        //[SerializeField]
+        [ReadOnly]
+        [SerializeField]
         private bool _useTime = false;
 
-        //[ReadOnly]
-        //[SerializeField]
+        [ReadOnly]
+        [SerializeField]
         private bool _useTrain = false;
-
         private bool _noActiveTrain = false;
 
         public bool UseTime { get => _useTime; set => _useTime = value; }
         public bool UseTrain { get => _useTrain; set => _useTrain = value; }
         public int WagonCount { get => _wagonCount; set => _wagonCount = value; }
 
+        /// <summary>
+        /// Update is called once per frame.
+        /// Check for the time limitation, if the time is over the limitation it will stop
+        /// the simulation.
+        /// </summary>
         private void Update()
         {
             if(_timeManager.Timeing >= _simulationLimitation.TimeLimit*60 && _useTime == true)
@@ -52,6 +68,11 @@ namespace TrainServiceSimulation
             }
         }
 
+        /// <summary>
+        /// Coroutine that starts the entire Sequence
+        /// it can only do something when no train is in the scene and the user
+        /// has checked one of the to limitations
+        /// </summary>
         public IEnumerator StartSequence()
         {
             if (!_noActiveTrain)
@@ -72,7 +93,7 @@ namespace TrainServiceSimulation
                 }
                 else if (UseTrain)
                 {
-                    if (WagonCount < _simulationLimitation.TrainLimit)
+                    if (WagonCount < _simulationLimitation.WagonLimit)
                     {
                         yield return new WaitForSeconds(1f);
                         _repairS.Init();
@@ -90,6 +111,11 @@ namespace TrainServiceSimulation
 
         }
 
+        /// <summary>
+        /// last event of ever train lifecyrcle 
+        /// its activate the destroy function set the wagon count up, stop the start coroutine 
+        /// and started it at the end of the function
+        /// </summary>
         public void OnRepairSequenceFinished()
         {
             _noActiveTrain = false;

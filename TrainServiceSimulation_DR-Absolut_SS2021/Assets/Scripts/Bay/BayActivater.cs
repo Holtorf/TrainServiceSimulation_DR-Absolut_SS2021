@@ -8,7 +8,8 @@ using TrainServiceSimulation.Train;
 namespace TrainServiceSimulation.Bay
 {
     /// <summary>
-    /// Class that managed all the Bays in the scene
+    /// Class that to activate the Bays in the scene and to help the 
+    /// FTS to look through all Bays
     /// </summary>
     public class BayActivater : MonoBehaviour
     {
@@ -24,9 +25,6 @@ namespace TrainServiceSimulation.Bay
         [SerializeField]
         private Slider _baySlider;
 
-        /// <summary>
-        /// A int do define the how many bays are needed to be activated
-        /// </summary>
         private int _bayCount;
 
         public int BayCount { get => _bayCount; set => _bayCount = value; }

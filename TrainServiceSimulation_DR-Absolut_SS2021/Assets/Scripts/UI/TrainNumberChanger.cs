@@ -26,7 +26,7 @@ namespace TrainServiceSimulation.UI
         private TrainManager _trainM;
 
         /// <summary>
-        /// Unity Event that is caled when the Slider ist changed over the dashboard
+        /// Unity Slider Event that is called when the Slider ist changed over the dashboard
         /// </summary>
         public void OnTrainSliderChanged()
         {

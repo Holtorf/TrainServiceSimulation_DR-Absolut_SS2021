@@ -5,7 +5,13 @@ using TMPro;
 using UnityEngine.UI;
 using TrainServiceSimulation.Train;
 
-public class SimulationLimitation : MonoBehaviour
+namespace TrainServiceSimulation.UI
+{
+
+    /// <summary>
+    /// Function that indicates when the simulation has to stop
+    /// </summary>
+    public class SimulationLimitation : MonoBehaviour
     {
         [SerializeField]
         private TextMeshProUGUI _trainLimitTMPro;
@@ -21,23 +27,29 @@ public class SimulationLimitation : MonoBehaviour
         [SerializeField]
         private Slider _timeLimitSlider;
 
-        private int _trainLimit;
+        private int _wagonLimit;
 
         private float _timeLimit = 100;
 
-        public int TrainLimit { get => _trainLimit; set => _trainLimit = value; }
+        public int WagonLimit { get => _wagonLimit; set => _wagonLimit = value; }
         public float TimeLimit { get => _timeLimit; set => _timeLimit = value; }
 
+        /// <summary>
+        /// Slider Event that changed the limit when the simulation has to stop after a number of wagons
+        /// </summary>
         public void TrainLimitChange()
         {
             if (_simulationStart.SimulationIsRunning == false)
             {
-                _trainLimit = (int)_trainLimitSlider.value;
-                _trainLimitTMPro.text = "Max. Trains: " + _trainLimit;
+                _wagonLimit = (int)_trainLimitSlider.value;
+                _trainLimitTMPro.text = "Max. Wagons: " + _wagonLimit;
             }
-            
+
         }
 
+        /// <summary>
+        /// Slider Event that changed the limit when the simulation has to stop after a time
+        /// </summary>
         public void TimeLimitChange()
         {
             if (_simulationStart.SimulationIsRunning == false)
@@ -46,4 +58,5 @@ public class SimulationLimitation : MonoBehaviour
                 _timeLimitTMPro.text = "Max. Time:" + _timeLimit;
             }
         }
+    }
 }

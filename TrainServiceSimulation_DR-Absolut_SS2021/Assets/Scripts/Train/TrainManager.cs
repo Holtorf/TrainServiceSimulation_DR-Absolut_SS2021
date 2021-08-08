@@ -6,9 +6,15 @@ using UnityEngine.Events;
 using TrainServiceSimulation;
 using TrainServiceSimulation.Bay;
 using TrainServiceSimulation.FTS;
+using TrainServiceSimulation.Timer;
 
 namespace TrainServiceSimulation.Train
 {
+    /// <summary>
+    /// Class that defined the overall function of the Trains
+    /// Its initiate the train, started the maintainance, moved the train from the start point the Trail along
+    /// and destory the train at the end of the entire repair sequence
+    /// </summary>
     public class TrainManager : MonoBehaviour
     {
         [SerializeField] 
@@ -32,8 +38,8 @@ namespace TrainServiceSimulation.Train
         [SerializeField]
         private float _trainMoveTime = 10f;
 
-        //[ReadOnly]
-        //[SerializeField]
+        [ReadOnly]
+        [SerializeField]
         private Trains _currentTrain;
 
         private int _trainNumber = 0;
@@ -43,6 +49,9 @@ namespace TrainServiceSimulation.Train
         private UnityEvent _maintenanceFinishedEvent;
         private UnityEvent _startWorkingEvent;
 
+        /// <summary>
+        /// Initiate the unity events
+        /// </summary>
         public void Awake()
         {
             _trainReachedDestinationEvent = new UnityEvent();
@@ -53,6 +62,9 @@ namespace TrainServiceSimulation.Train
 
         public int TrainNumber { get => _trainNumber; set => _trainNumber = value; }
 
+        /// <summary>
+        /// Created the train and set it on one of the three trails in the scene
+        /// </summary>
         public void InitTrain()
         {
             _randOrigin = Random.Range(0, _trainOrigin.Length);
@@ -63,11 +75,18 @@ namespace TrainServiceSimulation.Train
             }
         }
 
+        /// <summary>
+        /// Function that get called in the RepairSequnce class and started the coroutine
+        /// </summary>
         public void StartMaintenance()
         {
             StartCoroutine(StartMaintenanceSequence());
         }
 
+        /// <summary>
+        /// Defined the way the train is handled
+        /// first decouple, then start the FTS, when this is finished its called the Couple() and invoked the _maintenanceFinishedEvent
+        /// </summary>
         IEnumerator StartMaintenanceSequence()
         {
             _currentTrain.Decouple();
@@ -89,6 +108,9 @@ namespace TrainServiceSimulation.Train
             _maintenanceFinishedEvent.Invoke();
         }
 
+        /// <summary>
+        /// Leantween function to move the train in the hall
+        /// </summary>
         public void MoveTrainToDestination()
         {
             LeanTween.move(_currentTrain.gameObject, _trainDestination[_randOrigin].position, _trainMoveTime).setEaseInOutExpo().setOnComplete(() =>
@@ -97,6 +119,9 @@ namespace TrainServiceSimulation.Train
             });
         }
 
+        /// <summary>
+        /// Leantween function to move the train out the hall
+        /// </summary>
         public void MoveTrainToOrigin()
         {
             LeanTween.move(_currentTrain.gameObject, _trainOrigin[_randOrigin].position, _trainMoveTime).setEaseInOutExpo().setOnComplete(() =>
@@ -105,12 +130,20 @@ namespace TrainServiceSimulation.Train
             });
         }
 
+        /// <summary>
+        /// function to destroy the train when its out of the hall
+        /// </summary>
         public void DestroyTrain()
         {
             Destroy(_currentTrain.gameObject);
             _ftsManager.ClearAll();
             _appManager.StopAllCoroutines();
         }
+
+
+        /// <summary>
+        /// Listener for the events
+        /// </summary>
         public void AddListenerTrainReachedDestinationEvent(UnityAction call)
         {
             _trainReachedDestinationEvent.AddListener(call);

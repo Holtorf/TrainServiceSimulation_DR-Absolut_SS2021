@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TrainServiceSimulation;
 
-namespace TrainServiceSimulation
+namespace TrainServiceSimulation.Timer
 {
     /// <summary>
     /// Class to start the timer after a Trigger Enter

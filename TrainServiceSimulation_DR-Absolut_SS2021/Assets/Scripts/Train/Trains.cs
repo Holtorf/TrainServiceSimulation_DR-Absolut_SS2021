@@ -4,20 +4,22 @@ using UnityEngine;
 
 namespace TrainServiceSimulation.Train
 {
-
+    /// <summary>
+    /// Class that has the list of the wagons for the train and handled the coupling and decoupling of the wagons
+    /// </summary>
     public class Trains : MonoBehaviour
     {
 
-        //
+
         [SerializeField]
         private List<Wagon> wagons = new List<Wagon>();
 
-        //
         private float _decoupleTime = 1f;
 
-        //Only to check in the inspector
+        [ReadOnly]
         [SerializeField]
         private bool _finishedDecoupling = false;
+        [ReadOnly]
         [SerializeField]
         private bool _finishedCoupling = false;
 
@@ -25,7 +27,9 @@ namespace TrainServiceSimulation.Train
         public bool FinishedCoupling { get => _finishedCoupling; set => _finishedCoupling = value; }
         public List<Wagon> Wagons { get => wagons; set => wagons = value; }
 
-        //function to decouple the diffrent wagoons from the train
+        /// <summary>
+        /// function to decouple the diffrent wagoons from the train
+        /// </summary>
         public void Decouple()
         {
             LeanTween.value(0f, 1f, _decoupleTime * Wagons.Count - 1).setOnComplete(() =>
@@ -39,7 +43,9 @@ namespace TrainServiceSimulation.Train
             }
         }
 
-        //function to couple the diffrent wagoons after the RepairSequenz from the train
+        /// <summary>
+        /// function to couple the diffrent wagoons after the RepairSequenz from the train
+        /// </summary>
         public void Couple()
         {
             LeanTween.value(0f, 1f, _decoupleTime * Wagons.Count - 1).setOnComplete(() =>

@@ -6,6 +6,9 @@ using TrainServiceSimulation.Bay;
 
 namespace TrainServiceSimulation.MiniGame
 {
+    /// <summary>
+    /// Class that enable one of the labyrinths inside the bay
+    /// </summary>
     public class MiniGameController : MonoBehaviour
     {
         [SerializeField]
@@ -20,9 +23,11 @@ namespace TrainServiceSimulation.MiniGame
         public int Rand { get => _rand; set => _rand = value; }
         public GameObject[] Labyrinths { get => _labyrinths; set => _labyrinths = value; }
 
+        /// <summary>
+        /// set the random variable and activate one of the labyrinth
+        /// </summary>
         public void SetActivateLabyrinth()
         {
-           Debug.Log("Setze Labyri");
            Rand = UnityEngine.Random.Range(0, Labyrinths.Length);
            Labyrinths[Rand].gameObject.SetActive(true);
         }
